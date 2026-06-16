@@ -16,9 +16,7 @@
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.6;-webkit-font-smoothing:antialiased;}
 
-.print-btn{position:fixed;top:20px;right:20px;z-index:200;background:var(--green-dark);color:var(--gold);border:1px solid var(--gold);padding:10px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;}
-.print-btn:hover{background:var(--gold);color:var(--green-dark);}
-@media print{.print-btn{display:none;}@page{size:letter;margin:0.4in;}body{background:white;}.hero{min-height:auto;}}
+@media print{@page{size:letter;margin:0.4in;}body{background:white;}.hero{min-height:auto;}}
 
 .wordmark{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;letter-spacing:0.5px;}
 .wordmark .club{color:var(--cream);}.wordmark .os{color:var(--gold);font-style:italic;}
@@ -333,28 +331,6 @@ section{scroll-margin-top:64px;}
 .display-bullets li::before{content:'—';color:var(--gold);flex-shrink:0;}
 @media(max-width:900px){.display-panel-inner{grid-template-columns:1fr;}.display-screenshot{order:-1;}}
 
-/* INTEGRATION */
-.integration-section{background:var(--white);}
-.integration-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:56px;align-items:start;}
-.integration-flow{display:flex;flex-direction:column;gap:0;}
-.flow-step{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--gray-light);}
-.flow-step:last-child{border-bottom:none;}
-.flow-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-top:2px;}
-.flow-icon.existing{background:#F3F4F6;}
-.flow-icon.enhanced{background:var(--green-soft);}
-.flow-step-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
-.flow-step-label.existing{color:var(--gray);}
-.flow-step-label.enhanced{color:var(--green-acc);}
-.flow-step-title{font-size:15px;font-weight:600;color:var(--charcoal);margin-bottom:4px;}
-.flow-step-body{font-size:13px;color:var(--gray);line-height:1.55;}
-.integration-right{display:flex;flex-direction:column;gap:20px;}
-.integration-card{background:var(--cream-mid);border:1px solid var(--gray-light);border-radius:12px;padding:24px;position:relative;overflow:hidden;}
-.integration-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green-mid),var(--gold));}
-.icard-icon{font-size:20px;margin-bottom:12px;}
-.icard-title{font-size:15px;font-weight:600;color:var(--green-dark);margin-bottom:6px;}
-.icard-body{font-size:13px;color:var(--gray);line-height:1.6;}
-@media(max-width:900px){.integration-grid{grid-template-columns:1fr;}}
-
 /* PROOF */
 .proof-section{background:var(--cream-mid);}
 
@@ -484,15 +460,13 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
 </head>
 <body>
 
-<button class="print-btn" onclick="window.print()">Print / Save PDF</button>
-
 <nav>
   <div class="wordmark"><span class="club">Club</span><span class="os">OS</span></div>
   <ul class="nav-links">
     <li><a href="#problem">The Gap</a></li>
     <li><a href="#concierge">ClubOS Pass</a></li>
     <li><a href="#displays">Displays</a></li>
-    <li><a href="#integration">How It Fits</a></li>
+    <li><a href="#infrastructure">Infrastructure</a></li>
     <li><a href="#proof">Ballantyne</a></li>
     <li><a href="#roadmap">Built Together</a></li>
     <li><a href="#pilot">Pilot</a></li>
@@ -937,34 +911,12 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
   </div>
 </section>
 
-<!-- INTEGRATION -->
-<section class="integration-section" id="integration">
-  <div class="section-inner">
-    <div class="section-eyebrow">How It Fits</div>
-    <h2 class="section-headline">ClubOS enhances what<br><em>your clubs already do</em>.</h2>
-    <p class="section-body">Your clubs already send event flyers, post sign-up links, and drive member action. ClubOS doesn't replace any of that — it makes those touchpoints land harder when members are actually in the building.</p>
-    <div class="integration-grid">
-      <div class="integration-flow">
-        <div class="flow-step"><div class="flow-icon existing">📧</div><div><div class="flow-step-label existing">Today · Email blast goes out</div><div class="flow-step-title">Event announced to members</div><div class="flow-step-body">Member gets the email, maybe reads it, maybe registers. Then comes to the club and doesn't see it mentioned anywhere on-site.</div></div></div>
-        <div class="flow-step"><div class="flow-icon enhanced">📺</div><div><div class="flow-step-label enhanced">With ClubOS · Same email, better landing</div><div class="flow-step-title">Every screen reinforces it when they arrive</div><div class="flow-step-body">Dining room TV shows the event. Member scans, sees the same RSVP they got in email — but now they're at the club and three spots are left. That's when they register.</div></div></div>
-        <div class="flow-step"><div class="flow-icon existing">📋</div><div><div class="flow-step-label existing">Today · Sign-up goes to Google Form</div><div class="flow-step-title">Member looks up the form, fills it out</div><div class="flow-step-body">ClubOS doesn't replace your registration flow. Your links work exactly as they do today. The QR just creates a second, frictionless path to the same destination.</div></div></div>
-        <div class="flow-step"><div class="flow-icon enhanced">📷</div><div><div class="flow-step-label enhanced">With ClubOS · Scan opens the same destination</div><div class="flow-step-title">Zero disruption to what's working</div><div class="flow-step-body">Any existing link — Google Form, app download, external registration — can live behind a ClubOS QR. We don't ask members to learn anything new. We just make the path shorter.</div></div></div>
-      </div>
-      <div class="integration-right">
-        <div class="integration-card"><div class="icard-icon">🔗</div><div class="icard-title">Your QR codes already work. Ours add attribution.</div><div class="icard-body">Invited already uses QR codes everywhere. Members know how to scan. ClubOS adds the measurement layer on top — so every scan tells you something about member behavior that a QR alone cannot.</div></div>
-        <div class="integration-card"><div class="icard-icon">📱</div><div class="icard-title">No app to install. No behavior change required.</div><div class="icard-body">ClubOS Pass opens in a mobile browser — the same way any website does. Members don't download anything. Staff doesn't train anyone. The scan works the moment it's in place.</div></div>
-        <div class="integration-card"><div class="icard-icon">📺</div><div class="icard-title">Spectrio keeps running exactly as it does today.</div><div class="icard-body">Your Graphics &amp; Video, Facebook app, and Canva content keep cycling. ClubOS loads via the Web Page App slot — one addition to the existing rotation. Clubs control the ratio. Zero disruption.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PROOF — Ballantyne 4-step arc -->
 <section class="proof-section" id="proof">
   <div class="section-inner">
     <div class="section-eyebrow">Live Deployment · Ballantyne Country Club, Charlotte NC</div>
-    <h2 class="section-headline">Not a concept.<br><em>A case study in four acts.</em></h2>
-    <p class="section-body">One club. Real members. A sequence that started with a broken court display and is now heading to Bank of America Stadium. This is what engagement infrastructure looks like when you let it compound.</p>
+    <h2 class="section-headline">One club.<br><em>A sequence that keeps growing.</em></h2>
+    <p class="section-body">Ballantyne CC is the proof of concept. It started with a court display no one could read. It's now a 9-week trivia series, 46 members on a June night, and a concept session for Bank of America Stadium in December. That's what engagement infrastructure looks like when you let it compound.</p>
 
     <!-- 4-STEP ARC -->
     <div class="proof-arc-grid">
@@ -972,38 +924,45 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
       <div class="proof-arc-card fade-in">
         <div class="proof-arc-num">01</div>
         <div class="proof-arc-icon">📺</div>
-        <div class="proof-arc-title">Court TV Goes Live</div>
-        <div class="proof-arc-body">Northstar's dated spreadsheet display replaced with a branded ClubOS court reservation screen. Members check availability before calling the desk. Daily use within the first week.</div>
-        <div class="proof-arc-tag">Spring 2026</div>
+        <div class="proof-arc-title">Court TV Replaces Northstar</div>
+        <div class="proof-arc-body">The existing display was a dated, difficult-to-read spreadsheet grid. ClubOS replaced it with a branded real-time court reservation screen. Members began checking availability on the TV before calling the desk — that shift happened on its own, no training, no campaign.</div>
+        <div class="proof-arc-tag">Spring 2026 · Daily Use</div>
       </div>
       <div class="proof-arc-card fade-in">
         <div class="proof-arc-num">02</div>
         <div class="proof-arc-icon">📅</div>
-        <div class="proof-arc-title">9-Week Trivia Series Booked</div>
-        <div class="proof-arc-body">After the first trivia night, Orhan's team asked when the next one was — before the night was over. A 9-week series is now on the calendar. Members have a standing reason to come in on a weeknight.</div>
+        <div class="proof-arc-title">First Trivia Night → 9-Week Series</div>
+        <div class="proof-arc-body">The FAC team asked when the next one was before the first night was over. That conversation became a 9-week commitment. Members now have a standing reason to come in on a weeknight. The infrastructure created the habit — not a promotion.</div>
         <div class="proof-arc-tag">Recurring Engagement</div>
       </div>
       <div class="proof-arc-card fade-in">
         <div class="proof-arc-num">03</div>
         <div class="proof-arc-icon">🎤</div>
         <div class="proof-arc-title">Kpop Demon Hunters — 46 Players</div>
-        <div class="proof-arc-body">June 9, 2026. Themed trivia draws 46 members, 8 teams, 68% average accuracy, 10-question top streak. No app. No pre-registration. Just a QR on the TV and a leaderboard that made members check the screen.</div>
-        <div class="proof-arc-tag">June 9, 2026 · Live Data</div>
+        <div class="proof-arc-body">June 9, 2026. One themed trivia night: 46 members, 8 teams, 68% average accuracy, 10-question top streak. No app. No pre-registration. A QR code on the TV and a leaderboard with their names on it was enough.</div>
+        <div class="proof-arc-tag">June 9, 2026 · Live Numbers</div>
       </div>
       <div class="proof-arc-card fade-in">
         <div class="proof-arc-num">04</div>
         <div class="proof-arc-icon">🏟️</div>
-        <div class="proof-arc-title">Bank of America Stadium — December</div>
-        <div class="proof-arc-body">Orhan's team is planning a member Christmas party at Bank of America Stadium on December 7. ClubOS is in the concept session. This is what happens when you become infrastructure — you get invited to the next venue.</div>
+        <div class="proof-arc-title">Next: Bank of America Stadium</div>
+        <div class="proof-arc-body">Orhan's team is planning the December 7 member Christmas party at Bank of America Stadium and wants ClubOS in the concept session. When you become the infrastructure, you get invited to the next venue.</div>
         <div class="proof-arc-tag">December 7, 2026</div>
       </div>
     </div>
 
+    <!-- QUOTE — anchor of the section -->
+    <div class="proof-quote" style="margin-top:56px;">
+      <div class="proof-quote-text">"The Northstar graphics were so dated and difficult to read. Bill and his team created a custom display that gave our members a clear picture with all the right information."</div>
+      <div class="proof-quote-attr">Orhan Sarabi · FAC Director · <span>Ballantyne Country Club, Charlotte NC</span></div>
+      <a class="proof-case-link" href="https://ballantyne.clubhousectv.com" target="_blank">View live case study → ballantyne.clubhousectv.com</a>
+    </div>
+
     <!-- BEFORE / AFTER -->
-    <div class="proof-before-after">
+    <div class="proof-before-after" style="margin-top:48px;">
       <div>
         <div class="proof-before">
-          <div class="proof-before-label">Before · Northstar Court Display</div>
+          <div class="proof-before-label">Before · Northstar — What Members Saw</div>
           <div class="proof-before-content">
             <div class="proof-before-row proof-before-header"><span>Time</span><span>Court</span><span>Name</span></div>
             <div class="proof-before-row"><span>9:00 AM</span><span>Court 1</span><span>Smith / Jones</span></div>
@@ -1014,12 +973,12 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
             <div class="proof-before-row"><span>12:00 PM</span><span>Court 4</span><span>Sullivan / Park</span></div>
           </div>
         </div>
-        <div style="font-size:12px;color:var(--gray);margin-top:10px;font-style:italic;line-height:1.5;">"The Northstar graphics were so dated and difficult to read."<br>— Orhan Sarabi, FAC Director</div>
+        <div style="font-size:12px;color:var(--gray);margin-top:12px;line-height:1.6;">Dated rendering, no context, no branding. Members called the desk anyway.</div>
       </div>
       <div class="proof-arrow">→</div>
       <div>
         <div class="proof-after">
-          <div class="proof-after-label">After · ClubOS Court Display · ballantyne.clubhousectv.com</div>
+          <div class="proof-after-label">After · ClubOS · ballantyne.clubhousectv.com</div>
           <div class="proof-after-screen">
             <div class="proof-after-starter">
               <div class="proof-after-starter-label">On Court Now</div>
@@ -1038,35 +997,10 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
             </div>
           </div>
         </div>
-        <div style="font-size:12px;color:var(--green-acc);margin-top:10px;font-style:italic;line-height:1.5;">Full live display at ballantyne.clubhousectv.com</div>
+        <div style="font-size:12px;color:var(--green-acc);margin-top:12px;line-height:1.6;">Branded, readable at distance. Members stopped calling. Zero new hardware.</div>
       </div>
     </div>
 
-    <!-- STATS -->
-    <div class="proof-stats">
-      <div class="proof-stat-card featured">
-        <div class="proof-stat-num">46</div>
-        <div class="proof-stat-label">Members at a single trivia night</div>
-        <div class="proof-stat-detail">FAC members played from their phones, no app, while the leaderboard ran live on the TV. They asked when the next one was before leaving.</div>
-      </div>
-      <div class="proof-stat-card">
-        <div class="proof-stat-num">0</div>
-        <div class="proof-stat-label">New hardware required</div>
-        <div class="proof-stat-detail">Runs on the existing Spectrio Web Page App. Any Invited club running Enplug today can run ClubOS the same week.</div>
-      </div>
-      <div class="proof-stat-card">
-        <div class="proof-stat-num">Daily</div>
-        <div class="proof-stat-label">Court display in active use</div>
-        <div class="proof-stat-detail">Members check availability on the display before calling the desk. That behavior shift happened on its own — no training, no campaign.</div>
-      </div>
-    </div>
-
-    <!-- QUOTE -->
-    <div class="proof-quote">
-      <div class="proof-quote-text">"The Northstar graphics were so dated and difficult to read. Bill and his team created a custom display that gave our members a clear picture with all the right information."</div>
-      <div class="proof-quote-attr">Orhan Sarabi · FAC Director · <span>Ballantyne Country Club, Charlotte NC</span></div>
-      <a class="proof-case-link" href="https://ballantyne.clubhousectv.com" target="_blank">View live case study → ballantyne.clubhousectv.com</a>
-    </div>
   </div>
 </section>
 
@@ -1141,8 +1075,9 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
         </div>
       </div>
       <div class="infra-principles">
-        <div><div class="infra-p-title">Invited trained members to scan. ClubOS turns those scans into intelligence.</div><div class="infra-p-body">Your clubs already use QR codes everywhere. You've solved the hardest problem in consumer technology: getting members to change behavior. <strong>ClubOS adds the measurement and engagement layer on top.</strong></div></div>
-        <div><div class="infra-p-title">The right conversation is about corporate partnerships, not signage budgets.</div><div class="infra-p-body">Invited's ad relationships on club screens stay exactly as they are. ClubOS opens a different conversation — <strong>corporate partners who already have budgets for member engagement programs</strong> and want named, attributable placement in front of an affluent audience at the moment they're in the club.</div></div>
+        <div><div class="infra-p-title">Invited trained members to scan. ClubOS turns those scans into intelligence.</div><div class="infra-p-body">Your clubs already use QR codes everywhere. You've solved the hardest problem in consumer technology: getting members to change behavior. <strong>ClubOS adds the measurement and engagement layer on top.</strong> Your QR codes drive action. Ours add attribution, context, and a richer member experience on the other side.</div></div>
+        <div><div class="infra-p-title">Spectrio keeps running exactly as it does today.</div><div class="infra-p-body">Your Graphics &amp; Video, Facebook app, and Canva content keep cycling. ClubOS loads via the Web Page App slot that's already installed across the fleet — one addition to the rotation, not a replacement. <strong>Clubs control the ratio. Zero disruption to workflows that are already working.</strong> Any existing registration link — Google Form, app download, event sign-up — can live behind a ClubOS QR. We don't ask members to learn anything new. We just make the path shorter and measurable.</div></div>
+        <div><div class="infra-p-title">The right conversation is about corporate partnerships, not signage budgets.</div><div class="infra-p-body">Invited's ad relationships on club screens stay exactly as they are. ClubOS opens a different conversation — <strong>corporate partners who already have budgets for member engagement programs</strong> and want named, attributable placement in front of an affluent audience at the moment they're in the club. That's a new revenue opportunity, not a replacement.</div></div>
         <div><div class="infra-p-title">US Patent Pending. Filed May 15, 2026.</div><div class="infra-p-body">The presence detection architecture, two-screen interaction model, and venue-trained AI concierge layer are protected. <strong>Clubs that build on ClubOS are building on defensible infrastructure</strong> — not a feature a competitor ships in 18 months.</div></div>
       </div>
     </div>
@@ -1153,16 +1088,16 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
 <section class="pilot-section" id="pilot">
   <div class="section-inner">
     <div class="section-eyebrow">The Invitation</div>
-    <h2 class="section-headline">One club. Thirty days.<br><em>Real data.</em></h2>
-    <p class="section-body">Pick one club. We deploy, run a member engagement program, and hand you an engagement report your team has never had — in 30 days.</p>
+    <h2 class="section-headline">One club. Thirty days.<br><em>Built with the people who run it.</em></h2>
+    <p class="section-body">The most valuable conversation isn't with a GM — it's with the member engagement staff who plan the events, manage the floor, and know exactly what members ask for and never get. Those are the people who will shape ClubOS into something that actually works at scale.</p>
     <div class="pilot-card">
       <div>
         <div class="pilot-what-title">What a 30-day pilot looks like</div>
         <div class="pilot-steps">
-          <div class="pilot-step"><div class="pilot-step-num">01</div><div class="pilot-step-text"><strong>Pick the club.</strong> One GM who wants a win. Doesn't need to be the biggest — needs to be the most interested.</div></div>
+          <div class="pilot-step"><div class="pilot-step-num">01</div><div class="pilot-step-text"><strong>Get us in front of the engagement team.</strong> One club where the member experience coordinator, FAC director, or events manager has a problem they want solved. Not a boardroom conversation — a working session on the floor.</div></div>
           <div class="pilot-step"><div class="pilot-step-num">02</div><div class="pilot-step-text"><strong>We load onto existing screens.</strong> No hardware. No IT. We send a URL, the screen picks it up. Same day.</div></div>
-          <div class="pilot-step"><div class="pilot-step-num">03</div><div class="pilot-step-text"><strong>Members engage.</strong> Trivia, tee sheet, F&amp;B, AI concierge — whatever fits that club's biggest friction point. Your input shapes this completely.</div></div>
-          <div class="pilot-step"><div class="pilot-step-num">04</div><div class="pilot-step-text"><strong>You get the data.</strong> Full engagement report: which content worked, which members participated, which fixtures drove action. Data the club has never had.</div></div>
+          <div class="pilot-step"><div class="pilot-step-num">03</div><div class="pilot-step-text"><strong>Members engage — and staff shapes the product.</strong> Trivia, tee sheet, F&amp;B, AI concierge — whatever fits that club's biggest friction point. The engagement team's input in week one becomes the feature set by week four.</div></div>
+          <div class="pilot-step"><div class="pilot-step-num">04</div><div class="pilot-step-text"><strong>You get data no club has had before.</strong> Full engagement report: which content drove action, which members participated, which fixtures created behavior change. The kind of intelligence that changes how you plan next quarter.</div></div>
         </div>
       </div>
       <div>
@@ -1173,7 +1108,11 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
           <div class="pilot-commit">No app download required for members or staff</div>
           <div class="pilot-commit">Full engagement report delivered at 30 days</div>
           <div class="pilot-commit">Deployed same week the club says go</div>
-          <div class="pilot-commit">Five years inside the Invited network — we know how these clubs operate</div>
+          <div class="pilot-commit">Five years inside the Invited network — we know how these clubs operate and who does the real work</div>
+        </div>
+        <div style="margin-top:28px;padding:20px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:10px;">
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,76,0.6);font-family:'DM Mono',monospace;margin-bottom:8px;">The right first meeting</div>
+          <div style="font-size:13px;color:rgba(250,247,242,0.65);line-height:1.65;">A working session with regional marketing managers or member engagement staff — not a product demo. We bring the Ballantyne case study, they bring their hardest engagement problem. That's the conversation that builds something worth scaling across 150 clubs.</div>
         </div>
       </div>
     </div>
@@ -1188,9 +1127,6 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
 </footer>
 
 <script>
-// Print
-document.querySelector('.print-btn').addEventListener('click', function() { window.print(); });
-
 // Display tab switcher
 function switchTab(id, el) {
   document.querySelectorAll('.display-tab').forEach(function(t) { t.classList.remove('active'); });
