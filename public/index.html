@@ -451,8 +451,115 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
 <!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow">For Invited Clubs · Five Years Inside the Network</div>
-  <h1 class="hero-headline">Your members are in the room.<br><em>The room doesn't know it yet.</em></h1>
-  <p class="hero-sub">ClubOS is the engagement infrastructure layer that operates at the moment a member is physically present — turning every screen, every fixture, every touchpoint into something that works for them and for the club.</p>
+
+  <!-- TWO-SCREEN MOMENT — leads everything -->
+  <div style="display:flex;align-items:center;justify-content:center;gap:32px;margin-bottom:52px;flex-wrap:wrap;position:relative;">
+
+    <!-- TV / Club Screen — Trivia Leaderboard -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div style="background:#06081A;border:1.5px solid rgba(201,168,76,0.3);border-radius:12px;padding:18px 22px;width:260px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#9B59B6,#C9A84C,#9B59B6,transparent);opacity:0.8;"></div>
+        <!-- Header -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:1px;"><span style="color:#C9A84C;">Demon Hunters</span> <span style="color:rgba(245,240,232,0.9);">Trivia</span></div>
+            <div style="font-size:8px;color:rgba(245,240,232,0.35);letter-spacing:1px;margin-top:1px;">Ballantyne CC · 19th Hole</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;background:rgba(46,213,115,0.12);border:1px solid rgba(46,213,115,0.25);border-radius:10px;padding:3px 7px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#2ed573;animation:bl 1.5s ease-in-out infinite;"></div>
+            <div style="font-size:8px;color:#2ed573;font-weight:700;letter-spacing:1px;">LIVE</div>
+          </div>
+        </div>
+        <!-- Leaderboard -->
+        <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px;">
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 7px;background:rgba(255,215,0,0.08);border-radius:5px;border:1px solid rgba(255,215,0,0.15);">
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:#FFD700;width:14px;">1</div>
+            <div style="font-size:10px;color:rgba(245,240,232,0.9);flex:1;">Kpop Idols</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:#FFD700;">700</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 7px;">
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,240,232,0.4);width:14px;">2</div>
+            <div style="font-size:10px;color:rgba(245,240,232,0.7);flex:1;">Seoul Searching</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,240,232,0.5);">660</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 7px;">
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,240,232,0.4);width:14px;">3</div>
+            <div style="font-size:10px;color:rgba(245,240,232,0.7);flex:1;">BTS Stans</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,240,232,0.5);">630</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 7px;">
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,240,232,0.4);width:14px;">4</div>
+            <div style="font-size:10px;color:rgba(245,240,232,0.55);flex:1;">The Fairways</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,240,232,0.4);">590</div>
+          </div>
+        </div>
+        <!-- QR embedded on the screen -->
+        <div style="border-top:1px solid rgba(201,168,76,0.15);padding-top:10px;display:flex;align-items:center;gap:10px;">
+          <div style="background:#FAF7F2;border-radius:4px;padding:4px;flex-shrink:0;">
+            <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="#FAF7F2"/>
+              <rect x="8" y="8" width="26" height="26" fill="#06081A" rx="2"/><rect x="14" y="14" width="14" height="14" fill="#FAF7F2" rx="1"/><rect x="17" y="17" width="8" height="8" fill="#9B59B6"/>
+              <rect x="66" y="8" width="26" height="26" fill="#06081A" rx="2"/><rect x="72" y="14" width="14" height="14" fill="#FAF7F2" rx="1"/><rect x="75" y="17" width="8" height="8" fill="#06081A"/>
+              <rect x="8" y="66" width="26" height="26" fill="#06081A" rx="2"/><rect x="14" y="72" width="14" height="14" fill="#FAF7F2" rx="1"/><rect x="17" y="75" width="8" height="8" fill="#06081A"/>
+              <rect x="42" y="10" width="6" height="6" fill="#06081A"/><rect x="52" y="10" width="6" height="6" fill="#C9A84C"/>
+              <rect x="10" y="42" width="6" height="6" fill="#06081A"/>
+              <rect x="40" y="40" width="6" height="6" fill="#C9A84C"/><rect x="52" y="52" width="6" height="6" fill="#06081A"/>
+              <rect x="64" y="40" width="6" height="6" fill="#06081A"/><rect x="76" y="52" width="6" height="6" fill="#9B59B6"/>
+              <rect x="40" y="64" width="6" height="6" fill="#06081A"/><rect x="76" y="76" width="6" height="6" fill="#06081A"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size:10px;color:rgba(201,168,76,0.8);font-weight:600;margin-bottom:1px;">Scan to join the game</div>
+            <div style="font-size:8px;color:rgba(245,240,232,0.3);">46 players · No app required</div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,76,0.35);font-family:'DM Mono',monospace;">The Club Screen</div>
+    </div>
+
+    <!-- Arrow -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+      <div style="font-size:28px;color:var(--gold);opacity:0.5;line-height:1;">→</div>
+      <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,76,0.25);font-family:'DM Mono',monospace;">Scan</div>
+    </div>
+
+    <!-- Phone screen — Join the Game -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div style="background:#0D0A1A;border:1.5px solid rgba(155,89,182,0.35);border-radius:20px;padding:16px 14px;width:148px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#9B59B6,#C9A84C,transparent);opacity:0.9;"></div>
+        <!-- Header -->
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+          <div style="width:18px;height:18px;background:linear-gradient(145deg,#7B2D8B,#4A1060);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;">😈</div>
+          <div>
+            <div style="font-size:7px;font-weight:700;color:rgba(245,240,232,0.9);letter-spacing:0.5px;">DEMON HUNTERS</div>
+            <div style="font-size:6px;color:rgba(155,89,182,0.7);letter-spacing:1px;">BALLANTYNE CC</div>
+          </div>
+        </div>
+        <!-- Join prompt -->
+        <div style="text-align:center;margin-bottom:10px;">
+          <div style="font-size:11px;font-weight:700;color:rgba(245,240,232,0.9);line-height:1.2;margin-bottom:2px;">JOIN THE</div>
+          <div style="font-size:16px;font-weight:800;background:linear-gradient(90deg,#9B59B6,#2ed573);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1px;">GAME</div>
+        </div>
+        <div style="font-size:7px;color:rgba(245,240,232,0.4);text-align:center;margin-bottom:8px;line-height:1.4;">Pick a name your friends will recognize on the leaderboard.</div>
+        <!-- Name input -->
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(155,89,182,0.3);border-radius:6px;padding:6px 8px;margin-bottom:6px;">
+          <div style="font-size:8px;color:rgba(245,240,232,0.25);">Your name</div>
+        </div>
+        <!-- Join button -->
+        <div style="background:linear-gradient(90deg,#7B2D8B,#4A90D9);border-radius:6px;padding:7px;text-align:center;">
+          <div style="font-size:8px;font-weight:700;color:white;letter-spacing:1.5px;">JOIN GAME</div>
+        </div>
+        <div style="text-align:center;margin-top:6px;">
+          <div style="font-size:6px;color:rgba(245,240,232,0.2);">Powered by ClubOS</div>
+        </div>
+      </div>
+      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,76,0.35);font-family:'DM Mono',monospace;">Their Phone</div>
+    </div>
+
+  </div>
+
+  <h1 class="hero-headline">The leaderboard is on the screen.<br><em>The controller is in their hand.</em></h1>
+  <p class="hero-sub">A QR on the club TV. A member scans it. Their name goes on the leaderboard. No app. No account. No pre-registration. The screen and the phone work together — on hardware your clubs already have, the moment you say go.</p>
   <div class="hero-stat-row">
     <div><div class="hero-stat-num">150+</div><div class="hero-stat-label">Invited Locations</div></div>
     <div class="hero-stat-divider"></div>
@@ -807,9 +914,9 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
         </div>
         <div class="sc-card" id="sc-events" onclick="showP('events','sc-events')">
           <div class="sc-q">Moment 03 · Events</div>
-          <div class="sc-title">RSVP from wherever they're standing.</div>
-          <div class="sc-desc">Member sees an event notice on the dining room TV, scans, and reserves their spot — without walking to the desk or remembering to call Monday. The scan knows which screen they came from.</div>
-          <div class="sc-tag">Location-aware · Instant</div>
+          <div class="sc-title">We bring them to where you already want them to go.</div>
+          <div class="sc-desc">Member sees an event notice on the dining room TV and scans. The QR opens whatever your club wants them to reach — your app, your registration form, your existing RSVP flow. ClubOS doesn't compete with your destination. It makes sure members actually get there while they're standing in front of the screen, in the moment they're most likely to act.</div>
+          <div class="sc-tag">Your destination · Our bridge</div>
         </div>
         <div class="sc-card" id="sc-ruby" onclick="showP('ruby','sc-ruby')">
           <div class="sc-q">Moment 04 · Concierge</div>
