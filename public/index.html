@@ -90,6 +90,29 @@ section{scroll-margin-top:64px;}
 .jcard-tag{display:inline-block;margin-top:14px;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--green-acc);background:var(--green-soft);padding:4px 10px;border-radius:20px;}
 @media(max-width:900px){.timeline-stops{grid-template-columns:repeat(3,1fr);}.journey-cards{grid-template-columns:1fr;}.journey-intro{flex-direction:column;}.journey-intro-right{text-align:left;}}
 
+/* MEMBER JOURNEY */
+.journey-section{background:var(--cream);padding:100px 0;}
+.journey-timeline{display:flex;justify-content:center;gap:0;position:relative;margin-bottom:52px;flex-wrap:nowrap;overflow:visible;}
+.journey-line{position:absolute;top:44px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim,#8B6B28) 20%,var(--gold-dim,#8B6B28) 80%,transparent);opacity:0.4;pointer-events:none;}
+.journey-stop{display:flex;flex-direction:column;align-items:center;flex:1;max-width:180px;text-align:center;padding:0 8px;position:relative;z-index:1;}
+.journey-icon-wrap{width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;border:1.5px solid rgba(201,168,76,0.3);flex-shrink:0;}
+.journey-icon-wrap.green{background:var(--green-dark);border-color:var(--green-dark);}
+.journey-icon-wrap.cream{background:var(--cream);border-color:rgba(13,31,23,0.2);}
+.journey-icon-wrap.gold{background:var(--gold);border-color:var(--gold);}
+.journey-icon{font-size:32px;line-height:1;}
+.journey-time{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;font-weight:500;font-family:'DM Sans',sans-serif;}
+.journey-stop-name{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--green-dark);font-weight:600;margin-bottom:6px;}
+.journey-stop-desc{font-size:12px;color:var(--gray-mid,#6B7280);line-height:1.5;}
+.journey-qr-callout{background:var(--green-dark);border-radius:12px;padding:32px 40px;display:flex;align-items:flex-start;gap:24px;margin:0 auto 52px;max-width:780px;border:1px solid rgba(201,168,76,0.2);}
+.journey-qr-icon{font-size:28px;flex-shrink:0;margin-top:2px;}
+.journey-qr-headline{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);font-weight:600;margin-bottom:8px;}
+.journey-qr-body{font-size:14px;color:rgba(250,247,242,0.65);line-height:1.65;}
+.journey-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;max-width:1100px;margin:0 auto;}
+.journey-card{background:var(--white,#fff);border:1px solid rgba(13,31,23,0.1);border-radius:12px;padding:32px 28px;}
+.journey-card-icon{font-size:24px;margin-bottom:14px;}
+.journey-card-title{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--green-dark);font-weight:600;margin-bottom:12px;line-height:1.25;}
+.journey-card-body{font-size:14px;color:var(--gray-mid,#6B7280);line-height:1.65;}
+
 /* PASS SECTION */
 .pass-section{background:var(--green-dark);}
 .pass-section .section-eyebrow{color:rgba(201,168,76,0.7);}
@@ -439,6 +462,7 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
   <div class="wordmark"><span class="club">Club</span><span class="os">OS</span></div>
   <ul class="nav-links">
     <li><a href="#difference">How We're Different</a></li>
+    <li><a href="#journey">Member Journey</a></li>
     <li><a href="#concierge">ClubOS Pass</a></li>
     <li><a href="#displays">Displays</a></li>
     <li><a href="#infrastructure">Infrastructure</a></li>
@@ -706,6 +730,104 @@ footer{background:#060F0A;padding:36px 48px;display:flex;align-items:center;just
   </div>
 </section>
 
+
+<!-- MEMBER JOURNEY -->
+<section class="journey-section" id="journey">
+  <div class="section-inner">
+    <div class="section-eyebrow">A Saturday at the Club</div>
+    <h2 class="section-headline">Six natural touchpoints.<br><em>No app. No friction. No ask.</em></h2>
+    <p class="section-body" style="max-width:640px;margin:0 auto 56px;">ClubOS meets members where they already are — at every moment they naturally look up, look around, or pull out their phone. The QR encodes the location, so their phone already knows where it is before it opens.</p>
+
+    <div class="journey-timeline">
+      <div class="journey-line"></div>
+
+      <div class="journey-stop">
+        <div class="journey-icon-wrap green">
+          <span class="journey-icon">⛳</span>
+        </div>
+        <div class="journey-time">8:10 AM</div>
+        <div class="journey-stop-name">First Tee</div>
+        <div class="journey-stop-desc">Tee time confirmed, course conditions, who they're playing with</div>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-icon-wrap green">
+          <span class="journey-icon">🎾</span>
+        </div>
+        <div class="journey-time">10:00 AM</div>
+        <div class="journey-stop-name">Courts</div>
+        <div class="journey-stop-desc">Live reservation board, availability at a glance</div>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-icon-wrap cream">
+          <span class="journey-icon">🍽</span>
+        </div>
+        <div class="journey-time">12:30 PM</div>
+        <div class="journey-stop-name">Dining Room</div>
+        <div class="journey-stop-desc">Today's specials, full menu, event RSVP from the table</div>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-icon-wrap green">
+          <span class="journey-icon">🍺</span>
+        </div>
+        <div class="journey-time">3:00 PM</div>
+        <div class="journey-stop-name">19th Hole</div>
+        <div class="journey-stop-desc">Trivia night, bar specials, quick picks</div>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-icon-wrap cream">
+          <span class="journey-icon">📅</span>
+        </div>
+        <div class="journey-time">4:30 PM</div>
+        <div class="journey-stop-name">Event Board</div>
+        <div class="journey-stop-desc">Upcoming events, RSVP, kids programming</div>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-icon-wrap gold">
+          <span class="journey-icon">🏛</span>
+        </div>
+        <div class="journey-time">Any Time</div>
+        <div class="journey-stop-name">Ask Ruby</div>
+        <div class="journey-stop-desc">One scan, any question — dining, courts, tee times, events</div>
+      </div>
+
+    </div>
+
+    <div class="journey-qr-callout">
+      <div class="journey-qr-icon">📍</div>
+      <div class="journey-qr-text">
+        <div class="journey-qr-headline">QR without a screen</div>
+        <div class="journey-qr-body">Tennis courts, fitness center, pool — even without a TV, a QR at the amenity entry point starts capturing presence the moment a member arrives. The intelligence layer doesn't wait for a screen. It starts anywhere in the club.</div>
+      </div>
+    </div>
+
+    <div class="journey-cards">
+
+      <div class="journey-card">
+        <div class="journey-card-icon">⚡</div>
+        <div class="journey-card-title">The check-in that happens before the transaction</div>
+        <div class="journey-card-body">Beacons and location tracking require hardware, permissions, and passive monitoring members never opted into. A QR scan is a member choosing to be present — active, intentional, attributed. ClubOS knows who showed up because they said so.</div>
+      </div>
+
+      <div class="journey-card">
+        <div class="journey-card-icon">🖥</div>
+        <div class="journey-card-title">The screen that knows its room</div>
+        <div class="journey-card-body">The TV at the first tee shows tee sheet data. The TV at the bar shows specials and picks. The TV outside the fitness center shows class schedules. Each QR maps to its exact location — so every scan returns something useful for where the member actually is.</div>
+      </div>
+
+      <div class="journey-card">
+        <div class="journey-card-icon">📲</div>
+        <div class="journey-card-title">The QR that works anywhere</div>
+        <div class="journey-card-body">No app. No account. No hardware beyond a printed or displayed code. ClubOS runs on every surface a member might pause — screens, door frames, table tents, event signage. If they can see it, they can scan it. Guest capture starts at the parking lot if you want it to.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- CLUBOS PASS -->
 <section class="pass-section" id="concierge">
